@@ -1,58 +1,126 @@
-## ☀️ Solar Data Discovery: KAIM Week 0 Challenge
+That's fantastic\! Based on the comprehensive project structure and tasks you completed for the **10 Academy: Artificial Intelligence Mastery (KAIM) Week 0 Challenge**, here is a professional and detailed `README.md` file.
 
-[cite\_start]This repository contains the solution for the **10 Academy: Artificial Intelligence Mastery (KAIM) Week 0 Challenge**, focusing on the **Solar Data Discovery** project[cite: 2, 1]. [cite\_start]The goal is to analyze solar farm data from **Benin, Sierra Leone, and Togo** to provide strategic recommendations for **MoonLight Energy Solutions**[cite: 23, 37].
+This document covers all the requirements, including setup, running instructions, and a summary of your key findings for MoonLight Energy Solutions.
 
-### 🎯 Business Objective
+```markdown
+# ☀️ solar-challenge-week0: Cross-Country Solar Farm Analysis
 
-[cite\_start]The objective is to act as an Analytics Engineer for MoonLight Energy Solutions and perform a quick analysis of environmental measurements to identify **high-potential regions for solar installation**[cite: 38, 40].
+## Project Overview
 
----
+This repository contains the solution for the **10 Academy: Artificial Intelligence Mastery (KAIM) Week 0 Challenge**. The core objective was to perform a quick analysis of solar farm environmental measurement data from **Benin, Sierra Leone, and Togo** to inform a strategic recommendation for **MoonLight Energy Solutions** on high-potential regions for solar installation.
 
-## 📂 Repository Contents and Progress
-
-This repository is structured to manage the project environment, conduct Exploratory Data Analysis (EDA), and document the findings. [cite\_start]**Tasks 1 and 2 are complete**[cite: 12, 13].
-
-| Directory/File                      | Task             | Status          | Description                                                                                                                                                                                               |
-| :---------------------------------- | :--------------- | :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`requirements.txt`**              | Task 1: Setup    | **Complete**    | [cite\_start]Lists all necessary Python dependencies (e.g., pandas, matplotlib, etc.)[cite: 96].                                                                                                          |
-| **`.github/workflows/ci.yml`**      | Task 1: Setup    | **Complete**    | [cite\_start]GitHub Actions workflow to run `pip install -r requirements.txt` for Continuous Integration[cite: 97, 99].                                                                                   |
-| **`.gitignore`**                    | Task 1: Setup    | **Complete**    | [cite\_start]Configured to ignore the **`data/`** folder and CSV files to prevent raw/cleaned data from being committed[cite: 95, 200].                                                                   |
-| **`notebooks/`**                    | Task 2: EDA      | **In Progress** | [cite\_start]Contains Jupyter Notebooks for Data Profiling, Cleaning, and EDA for each country[cite: 126, 127].                                                                                           |
-| **`notebooks/<country>_eda.ipynb`** | Task 2: EDA      | **Complete**    | [cite\_start]Each notebook performs **Summary Statistics**, **Outlier Detection** (using Z-scores for GHI, DNI, DHI, etc.), and **Time Series Analysis** on GHI, DNI, DHI, and Tamb[cite: 129, 132, 136]. |
-| **`data/`**                         | Task 2: Cleaning | **Output**      | [cite\_start]This folder, although ignored, contains the **cleaned CSVs** (e.g., `data/benin_clean.csv`) ready for comparison[cite: 134].                                                                 |
+The project demonstrates proficiency in Git & GitHub , environment setup , Exploratory Data Analysis (EDA), data cleaning, statistical comparison and dashboard creation using Streamlit.
 
 ---
 
-## 📈 Key Data Variables Used in Analysis
+## 🚀 Business Objective (MoonLight Energy Solutions)
 
-[cite\_start]The analysis focuses on time-series data extracted from Solar Radiation Measurement Data[cite: 43]. The primary variables used in EDA (Task 2) include:
-
-| Variable     | Unit              | Description                                                                                                       |
-| :----------- | :---------------- | :---------------------------------------------------------------------------------------------------------------- |
-| **GHI**      | $\text{W/m}^2$    | [cite\_start]**Global Horizontal Irradiance** (Total solar radiation received on a horizontal surface)[cite: 47]. |
-| **DNI**      | $\text{W/m}^2$    | [cite\_start]**Direct Normal Irradiance** (Solar radiation perpendicular to the sun's rays)[cite: 48].            |
-| **DHI**      | $\text{W/m}^2$    | [cite\_start]**Diffuse Horizontal Irradiance** (Scattered solar radiation)[cite: 49].                             |
-| **Tamb**     | $^\circ \text{C}$ | [cite\_start]Ambient Temperature[cite: 52].                                                                       |
-| **WS**       | $\text{m/s}$      | [cite\_start]Wind Speed[cite: 54].                                                                                |
-| **Cleaning** | `1 or 0`          | [cite\_start]Flag signifying if a cleaning event occurred[cite: 60].                                              |
+As an Analytics Engineer, the task was to analyze environmental data—including Global Horizontal Irradiance (GHI), Direct Normal Irradiance (DNI), and various temperature/wind metrics to identify key trends and translate observations into a data-driven strategy report. The final recommendation focuses on identifying high-potential regions for solar installation that align with the company's long-term sustainability goals.
 
 ---
 
-## ⚙️ Environment Setup
+## 🛠️ Project Structure and Technologies
 
-To reproduce the environment for Tasks 1 and 2:
+The repository structure follows the recommended pattern, ensuring separation of notebooks, source code, and configuration files:
+```
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone [Your-Repo-Link]/solar-challenge-week0.git
-    cd solar-challenge-week0
-    ```
-2.  **Set up Virtual Environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate # or appropriate command for your OS/conda
-    ```
-3.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+├── .github/
+│ └── workflows/
+│ └── ci.yml \# Basic CI check for dependency installation
+├── app/
+├── main.py \# Main Streamlit application script
+└── utils.py \# Utility functions for data processing/viz
+├── notebooks/
+├── \<country\>\_eda.ipynb \# Notebooks for Task 2: Data Cleaning & EDA and task 4 for comparing countries
+requirements.txt \# List of all project dependencies
+├── README.md
+.gitignore \# Excludes sensitive data/ and temporary files
+
+````
+
+### Technology Stack
+
+*Language:** Python 3.x
+* **Core Libraries:** Pandas, NumPy (for data manipulation)
+* **Visualization:** Matplotlib, Seaborn (for EDA)
+* **Web App:** Streamlit (for the interactive dashboard)
+* **Version Control:** Git & GitHub
+***Automation:** GitHub Actions (for CI/CD)
+
+---
+
+## ⚙️ Setup and Environment Reproduction
+
+The project uses a Python virtual environment to manage dependencies. The following steps reproduce the environment locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/](https://github.com/)<eyob-hailu>/solar-challenge-week0.git
+cd solar-challenge-week0
+````
+
+### 2\. Set up the Python Virtual Environment
+
+Use either `venv` or `conda` to create and activate a virtual environment.
+
+**Using `venv`:**
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Linux/macOS
+# .\venv\Scripts\activate.ps1 # On Windows PowerShell
+```
+
+### 3\. Install Dependencies
+
+Install all required packages listed in `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4\. Data Preparation
+
+**Note:** The raw data files are not included in the repository and are tracked by the `.gitignore` file.
+
+- Place the raw data files (e.g., `togo-dapaong_qc.csv`) into a local `data/` folder.
+- Run the notebooks in `notebooks/` (Task 2 & 3) to perform cleaning and generate the required clean CSVs (`data/*_clean.csv`) which are used by the Streamlit application.
+
+---
+
+## ▶️ How to Run the Interactive Dashboard
+
+The project includes an optional, interactive Streamlit dashboard (Task 4).
+
+1.  Ensure the environment is set up and activated (as per the section above).
+2.  Ensure the necessary **cleaned** data files (`data/*_clean.csv`) exist locally, as the Streamlit app reads these files.
+3.  Run the main application script:
+
+<!-- end list -->
+
+```bash
+streamlit run app/main.py
+```
+
+This will launch the application in your default web browser, allowing you to interactively visualize key insights (e.g., boxplots of GHI, DNI, DHI, and the top regions table).
+
+---
+
+## 📊 Key Findings Summary
+
+The analysis focused on comparing solar potential metrics across Benin, Sierra Leone, and Togo.
+
+### Data Cleaning and Profiling (Task 2)
+
+- **Outlier Management:** Outliers were proactively identified using the **Z-score method** (|Z|>3) on key columns (GHI, DNI, DHI, ModA, ModB, WS, WSgust) and removed to ensure the final statistics are robust.
+- **Missing Data:** Missing values in key columns were imputed using the **median** before outlier removal.
+- **Thermal Correlation:** A strong positive correlation was confirmed between solar irradiance metrics (GHI, DNI, DHI) and module temperatures (TModA, TModB), highlighting the importance of thermal management in the final installation.
+
+### Cross-Country Comparison (Task 3)
+
+| Metric                       | Visualization                 | Insight                                                                                                                                                           |
+| :--------------------------- | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GHI/DNI/DHI Distribution** | Boxplots (Colored by Country) | Visualized the mean, median, and variability of solar potential, showing which country offers the highest _average_ irradiance vs. the highest _peak_ irradiance. |
+| **Statistical Significance** | One-way ANOVA (on GHI)        | Statistically tested whether the observed differences in mean GHI across the three countries were significant (p-values were noted).                              |
+| **Ranking**                  | Summary Table/Bar Chart       | Provided a clear ranking based on metrics like median GHI, which serves as the core evidence for the final strategic recommendation.                              |
