@@ -139,4 +139,3 @@ To meet the submission guidelines, a folder has been created to house visual doc
 
 dashboard_screenshots/dashboard_preview.pngA key screenshot demonstrating the usability and visual appeal of the interactive dashboard (e.g., GHI boxplot with country selection widgets)181818181818181818.
 
-and the d
